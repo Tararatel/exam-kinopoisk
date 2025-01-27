@@ -6,12 +6,12 @@ const baseMovieSchema = z.object({
   year: z.string(),
   posterUrl: z.string().url(),
   rating: z.number(),
+  description: z.string(),
+  ratingKinopoisk: z.number(),
+  nameRu: z.string(),
 });
 
 export const filmPageSchema = baseMovieSchema.extend({
-  nameRu: z.string(),
-  ratingKinopoisk: z.number(),
-  description: z.string(),
 });
 
 export type Movie = z.infer<typeof baseMovieSchema>;
