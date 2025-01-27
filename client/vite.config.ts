@@ -1,0 +1,26 @@
+import type { AliasOptions } from 'vite';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+
+const root = path.resolve(__dirname, 'src');
+
+export default defineConfig({
+  plugins: [
+    react({
+      babel: {
+        plugins: [['babel-plugin-react-compiler', { target: '18' }]],
+      },
+    }),
+  ],
+  resolve: {
+    alias: {
+      '@': root,
+    } as AliasOptions,
+  },
+  server: {
+    proxy: {
+      '/api': 'http://localhost:3000',
+    },
+  },
+});

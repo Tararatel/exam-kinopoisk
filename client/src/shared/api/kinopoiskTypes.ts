@@ -1,0 +1,48 @@
+import { z } from 'zod';
+
+export const CountrySchema = z.object({
+  country: z.string(),
+});
+
+export const GenreSchema = z.object({
+  genre: z.string(),
+});
+
+export const FilmSchema = z.object({
+  filmId: z.number(),
+  nameRu: z.string().optional(),
+  nameEn: z.string().nullable().optional(),
+  year: z.string().optional(),
+  filmLength: z.string().nullable().optional(),
+  countries: z.array(CountrySchema).optional(),
+  genres: z.array(GenreSchema).optional(),
+  rating: z.string().nullable().optional(),
+  ratingVoteCount: z.number().optional(),
+  posterUrl: z.string().url().optional(),
+  posterUrlPreview: z.string().url().optional(),
+  ratingChange: z.number().nullable().optional(),
+  isRatingUp: z.boolean().nullable().optional(),
+  isAfisha: z.number().optional(),
+});
+
+export const SearchFilmSchema = z.object({
+  filmId: z.number(),
+  nameRu: z.string().optional(),
+  nameEn: z.string().optional(),
+  type: z.string().optional(),
+  year: z.string().optional(),
+  description: z.string().optional(),
+  filmLength: z.string().optional(),
+  countries: z.array(CountrySchema).optional(),
+  genres: z.array(GenreSchema).optional(),
+  rating: z.string().optional(),
+  ratingVoteCount: z.number().optional(),
+  posterUrl: z.string().url().optional(),
+  posterUrlPreview: z.string().url().optional(),
+});
+
+export const FilmsSchema = z.array(FilmSchema);
+export const SearchFilmsSchema = z.array(SearchFilmSchema);
+
+export type Films = z.infer<typeof FilmsSchema>;
+export type Search = z.infer<typeof SearchFilmsSchema>;
