@@ -91,17 +91,19 @@
 
 ---
 
-### 6. Работа с рейтингами
+### 7. Работа с рейтингами
 **Цель:** Сохранять оценку пользователя для фильма.  
 **Файлы:**  
 - `ratingsSlice.ts`  
 - `ratingsThunk.ts`  
 - `MoviePage.tsx`
+- `RatingForm.tsx`
 
 **Задачи:**  
 - В `ratingsThunk.ts` реализуйте thunk `rateMovie` для отправки оценки на сервер.
 - В `ratingsSlice.ts` обработайте действия `rateMovie` и `fetchUserRating`.
 - В `MoviePage.tsx` Настройте отправку оценки
+- В `RatingForm.tsx` Восстановите получение dispatch и вызвать `rateMovie` при нажатии на кнопку.
 
 ---
 

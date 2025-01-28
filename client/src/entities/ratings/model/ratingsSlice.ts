@@ -19,12 +19,9 @@ const ratingsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchUserRating.fulfilled, (state, action: PayloadAction<Rating>) => {
-        state.ratings[action.payload.filmId] = action.payload.rating;
-      })
-      .addCase(rateMovie.fulfilled, (state, action: PayloadAction<Rating>) => {
-        state.ratings[action.payload.filmId] = action.payload.rating;
-      });
+    /* Release 7 */
+    // обработайте экшен rateMovie
+    // Обработайте ошибку
   },
 });
 

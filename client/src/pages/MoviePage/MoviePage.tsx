@@ -15,7 +15,7 @@ const MoviePage = (): React.JSX.Element => {
   /* Здесь получить dispatch */
   /* Здесь получить данные фильма из стора */
 
-	/* Release 6 */
+	/* Release 7 */
   /* Здесь получить оценку из стора */
 
   useEffect(() => {
@@ -23,13 +23,13 @@ const MoviePage = (): React.JSX.Element => {
       /* Release 2 */
       /* Здесь запросить детали фильма */
 
-      /* Release 6 */
+      /* Release 7 */
       /* Здесь запросить оценку пользователя */
     }
   }, [id]);
 
   const handleRatingChange = (newValue: number | null): void => {
-    /* Release 6 */
+    /* Release 7 */
     /* Здесь отправить оценку на сервер */
   };
 
