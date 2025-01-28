@@ -12,17 +12,17 @@ type Props = {
 
 const MovieCard = ({ movie }: Props): React.JSX.Element => {
   const [isHovered, setIsHovered] = useState(false);
-  /* Release 3 */
+
   /* Здесь получить статус "в избранном" из стора вместо фиксированного статуса false */
   const isFavorite = false;
 
   const handleAddFavorite = (): void => {
-    /* Release 4 */
+
     /* Здесь реализовать добавление в избранное */
   };
 
   const handleRemoveFavorite = (): void => {
-    /* Release 5 */
+
     /* Здесь реализовать удаление из избранного */
   };
 

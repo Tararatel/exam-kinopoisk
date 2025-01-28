@@ -12,11 +12,9 @@ const RatingForm = ({ filmId }: { filmId: number }): React.JSX.Element => {
     defaultValues: { filmId },
   });
 
-  /* Release 7 */
   /* Здесь получить dispatch с помощью useAppDispatch */
 
   const onSubmit = (data: FormData): void => {
-    /* Release 7 */
     /* Здесь вызвать rateMovie  */
   };
 

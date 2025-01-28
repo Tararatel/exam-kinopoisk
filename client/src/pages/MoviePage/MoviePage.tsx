@@ -6,7 +6,7 @@ import type { Film } from '@/shared/api/kinopoiskTypes';
 
 const MoviePage = (): React.JSX.Element => {
   const navigate = useNavigate();
-  /* Release 2 */
+
   /* Получить данные фильма из стора вместо моковых данных */
   const movie: Film = {
     filmId: 1,

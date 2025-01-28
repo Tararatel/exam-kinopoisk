@@ -3,7 +3,7 @@ import styles from './FavoritesPage.module.scss';
 import type { FavoriteInput } from '@/entities/favorites/types/favoritesType';
 
 const FavoritesPage = (): React.JSX.Element => {
-  /* Release 3 */
+
   /* Здесь получить список избранного из стора */
   const items: FavoriteInput[] = [];
   const status = 'succeeded';

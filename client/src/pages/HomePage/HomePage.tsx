@@ -4,12 +4,12 @@ import styles from './HomePage.module.scss';
 import type { Films } from '@/shared/api/kinopoiskTypes';
 
 const HomePage = (): React.JSX.Element => {
-  /* Release 1 */
+
   /* Получить список фильмов и статус загрузки из стора */
   const status: 'loading' | 'succeeded' = 'succeeded';
   const movies: Films = [];
 
-  /* Release 6 */
+
   const handleSearch = (query: string): void => {
     /* Здесь обновить поисковый запрос в сторе */
   };
