@@ -15,48 +15,26 @@ const favoritesSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchFavorites.pending, (state) => {
-        state.status = 'loading';
-        state.error = null;
-      })
-      .addCase(fetchFavorites.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        state.items = action.payload;
-      })
-      .addCase(fetchFavorites.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.payload as string;
-      })
-      .addCase(addFavorite.pending, (state) => {
-        state.status = 'loading';
-        state.error = null;
-      })
-      .addCase(addFavorite.fulfilled, (state, action) => {
-        state.items.push(action.payload);
-        state.status = 'succeeded';
-      })
-      .addCase(addFavorite.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.payload as string;
-      })
-      .addCase(removeFavorite.pending, (state) => {
-        state.status = 'loading';
-        state.error = null;
-      })
-      .addCase(removeFavorite.fulfilled, (state, action: PayloadAction<number>) => {
-        state.items = state.items.filter((item) => item.filmId !== action.payload);
-        state.status = 'succeeded';
-      })
-      .addCase(removeFavorite.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.payload as string;
-      });
+    /* Release 4 */
+    // Обработайте состояние загрузки
+    // Обновите список избранных фильмов и статус
+    // Обработать ошибку
+
+    /* Release 3 */
+    // Обработайте состояние загрузки
+    // Добавьте фильм в стейт
+    // Обработать ошибку
+
+    /* Release 5 */
+    // Обработайте состояние загрузки
+    // Удалите фильм из стейта по filmId
+    // Обработать ошибку
   },
 });
 
 export default favoritesSlice.reducer;
 
-export const selectAllFavorites = (state: { favorites: FavoritesState }): Favorite[] =>
-  state.favorites.items;
-export const selectIsFavorite = (filmId: number) => (state: { favorites: FavoritesState }) =>
-  state.favorites.items.some((item) => item.filmId === filmId);
+export const selectIsFavorite = (filmId: number) => (state) => {
+	/* Release 4 */
+  // Верните true, если фильм с filmId есть в избранном
+};

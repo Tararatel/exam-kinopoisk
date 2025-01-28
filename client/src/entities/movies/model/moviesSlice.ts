@@ -20,36 +20,19 @@ const moviesSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchTopMovies.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(fetchTopMovies.fulfilled, (state, action: PayloadAction<Movie[]>) => {
-        state.status = 'succeeded';
-        state.list = action.payload;
-      })
-      .addCase(fetchMovieDetails.pending, (state) => {
-        state.status = 'loading';
-        state.currentMovie = null;
-      })
-      .addCase(fetchMovieDetails.fulfilled, (state, action: PayloadAction<FilmPageType>) => {
-        state.status = 'succeeded';
-        state.currentMovie = action.payload;
-      })
-      .addCase(fetchMovieDetails.rejected, (state) => {
-        state.status = 'failed';
-      })
-      .addCase(fetchTopMovies.rejected, (state, action) => {
-        state.status = 'failed';
-        console.error('Failed to fetch top movies:', action.error);
-      })
-      .addCase(searchMoviesAsync.fulfilled, (state, action: PayloadAction<Movie[]>) => {
-        state.status = 'succeeded';
-        state.list = action.payload;
-      })
-      .addCase(searchMoviesAsync.rejected, (state, action) => {
-        state.status = 'failed';
-        console.error('Failed to search movies:', action.error.message);
-      });
+    /* Release 1 */
+    // Обработайте состояние загрузки
+    // Обновите список фильмов и статус
+    // Обработайте ошибку
+
+    /* Release 2 */
+    // Обработайте состояние загрузки
+    // Сохраните текущий фильм в стейт
+    // Обработайте ошибку
+
+    /* Release 6 */
+    // Обновите список фильмов результатами поиска
+    // Обработайте ошибку
   },
 });
 

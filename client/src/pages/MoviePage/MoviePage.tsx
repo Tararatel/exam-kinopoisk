@@ -8,25 +8,29 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import styles from './MoviePage.module.scss';
 
 const MoviePage = (): React.JSX.Element => {
-  const { id } = useParams<{ id: string }>();
-  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
-  const movie = useAppSelector((state) => state.movies.currentMovie);
-  const status = useAppSelector((state) => state.movies.status);
-  const userRating = useAppSelector((state) => state.ratings.ratings[Number(id)] || 0);
+	/* Release 2 */
+  /* Здесь получить filmId из URL параметров */
+  /* Здесь получить dispatch */
+  /* Здесь получить данные фильма из стора */
+
+	/* Release 6 */
+  /* Здесь получить оценку из стора */
 
   useEffect(() => {
     if (id) {
-      void dispatch(fetchMovieDetails(Number(id)));
-      void dispatch(fetchUserRating(Number(id)));
+      /* Release 2 */
+      /* Здесь запросить детали фильма */
+
+      /* Release 6 */
+      /* Здесь запросить оценку пользователя */
     }
-  }, [id, dispatch]);
+  }, [id]);
 
   const handleRatingChange = (newValue: number | null): void => {
-    if (newValue && id) {
-      void dispatch(rateMovie({ filmId: Number(id), rating: newValue }));
-    }
+    /* Release 6 */
+    /* Здесь отправить оценку на сервер */
   };
 
   if (status === 'loading') {

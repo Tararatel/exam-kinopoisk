@@ -7,21 +7,19 @@ import styles from './HomePage.module.scss';
 import { setSearchQuery } from '@/entities/movies/model/moviesSlice';
 
 const HomePage = (): React.JSX.Element => {
-  const dispatch = useAppDispatch();
-  const { list: movies, status, searchQuery } = useAppSelector((state) => state.movies);
 
-  useEffect(() => {
-    if (movies.length === 0) {
-      void dispatch(fetchTopMovies());
-    }
-  }, [dispatch, movies.length]);
+	/* Release 1 */
+  /* Здесь получить dispatch с помощью useAppDispatch */
+  /* Здесь получить список фильмов и статус загрузки из стора */
 
+	/* Release 5 */
   const handleSearch = (query: string): void => {
-    dispatch(setSearchQuery(query));
+    /* Здесь обновить поисковый запрос в сторе */
+
     if (query.trim()) {
-      void dispatch(searchMoviesAsync(query));
+      /* Здесь вызвать асинхронный поиск */
     } else {
-      void dispatch(fetchTopMovies());
+      /* Здесь запросить топ фильмов */
     }
   };
 

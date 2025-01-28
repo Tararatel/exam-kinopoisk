@@ -5,14 +5,13 @@ import MovieGrid from '@/entities/movies/ui/MovieGrid/MovieGrid';
 import styles from './FavoritesPage.module.scss';
 
 const FavoritesPage = (): React.JSX.Element => {
-  const dispatch = useAppDispatch();
-  const { items: movies, status } = useAppSelector((state) => state.favorites);
+	/* Release 4 */
+  /* Здесь получить список избранного из стора */
 
   useEffect(() => {
-    if (movies.length === 0) {
-      void dispatch(fetchFavorites());
-    }
-  }, [dispatch, movies]);
+    /* Release 4 */
+    /* Здесь загрузить избранное при монтировании */
+  }, []);
 
   return (
     <div className={styles.page}>

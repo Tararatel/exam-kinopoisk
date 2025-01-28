@@ -15,22 +15,18 @@ type Props = {
 
 const MovieCard = ({ movie }: Props): React.JSX.Element => {
   const [isHovered, setIsHovered] = useState(false);
-  const dispatch = useAppDispatch();
-  const isFavorite = useAppSelector(selectIsFavorite(movie.filmId));
+
+	/* Release 4 */
+  /* Здесь получить статус "в избранном" из стора */
 
   const handleAddFavorite = (): void => {
-    void dispatch(
-      addFavorite({
-        filmId: movie.filmId,
-        title: movie.nameRu,
-        year: movie.year,
-        posterUrl: movie.posterUrl,
-      }),
-    );
+    /* Release 3 */
+    /* Здесь отправить добавление в избранное */
   };
 
   const handleRemoveFavorite = (): void => {
-    void dispatch(removeFavorite(movie.filmId));
+		/* Release 5 */
+    /* Здесь отправить удаление из избранного */
   };
 
   return (
