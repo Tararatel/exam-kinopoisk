@@ -9,7 +9,8 @@ import { setSearchQuery } from '@/entities/movies/model/moviesSlice';
 const HomePage = (): React.JSX.Element => {
   const dispatch = useAppDispatch();
   const { list: movies, status, searchQuery } = useAppSelector((state) => state.movies);
-
+	console.log(movies);
+	
   useEffect(() => {
     if (movies.length === 0) {
       void dispatch(fetchTopMovies());
