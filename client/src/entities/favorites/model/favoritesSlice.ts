@@ -17,6 +17,5 @@ const favoritesSlice = createSlice({
 export default favoritesSlice.reducer;
 
 export const selectIsFavorite = (filmId: number) => (state) => {
-  /* Release 4 */
-  // Верните true, если фильм с filmId есть в избранном
+  // Верни true, если фильм с filmId есть в избранном
 };

@@ -30,7 +30,7 @@ export type FavoriteInput = z.infer<typeof FavoriteSchema>;
 export type Favorite = z.infer<typeof favoriteSchema>;
 
 export type FavoritesState = {
-  items: Favorite[];
+  items: FavoriteInput[];
   status: 'idle' | 'loading' | 'succeeded' | 'failed';
   error: string | null;
 };

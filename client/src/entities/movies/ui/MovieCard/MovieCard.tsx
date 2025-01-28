@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
-import type { FilmPageType } from '@/entities/movies/types/moviesType';
 import styles from './MovieCard.module.scss';
 import { Rating } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Link } from 'react-router-dom';
+import type { Film } from '@/shared/api/kinopoiskTypes';
 
 type Props = {
-  movie: FilmPageType;
+  movie: Film;
 };
 
 const MovieCard = ({ movie }: Props): React.JSX.Element => {
   const [isHovered, setIsHovered] = useState(false);
-  /* Release 4 */
+  /* Release 3 */
   /* Здесь получить статус "в избранном" из стора вместо фиксированного статуса false */
   const isFavorite = false;
 
   const handleAddFavorite = (): void => {
-    /* Release 3 */
+    /* Release 4 */
     /* Здесь реализовать добавление в избранное */
   };
 

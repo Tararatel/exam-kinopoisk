@@ -1,20 +1,19 @@
-import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Rating from '@mui/material/Rating';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import styles from './MoviePage.module.scss';
-import type { Movie } from '@/entities/movies/types/moviesType';
+import type { Film } from '@/shared/api/kinopoiskTypes';
 
 const MoviePage = (): React.JSX.Element => {
   const navigate = useNavigate();
   /* Release 2 */
   /* Получить данные фильма из стора вместо моковых данных */
-  const movie: Movie = {
+  const movie: Film = {
     filmId: 1,
     title: 'название',
     year: '2025',
     posterUrl: '/no-img.jpeg',
-    rating: 4,
+    rating: `4`,
     description: 'описание',
     ratingKinopoisk: 3,
     nameRu: 'название на русском',
@@ -22,7 +21,6 @@ const MoviePage = (): React.JSX.Element => {
   const status: 'loading' | 'succeeded' = 'succeeded';
   const userRating = 2;
 
-  /* Release 7 */
   const handleRatingChange = (newValue: number | null): void => {
     /* Здесь отправить оценку на сервер */
   };

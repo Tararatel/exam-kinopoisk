@@ -1,15 +1,15 @@
 import MovieGrid from '@/entities/movies/ui/MovieGrid/MovieGrid';
 import Search from '@/widgets/ui/Search/Search';
 import styles from './HomePage.module.scss';
-import type { Movie } from '@/entities/movies/types/moviesType';
+import type { Films } from '@/shared/api/kinopoiskTypes';
 
 const HomePage = (): React.JSX.Element => {
-  const status: 'loading' | 'succeeded' = 'succeeded';
-  const movies: Movie[] = [];
   /* Release 1 */
   /* Получить список фильмов и статус загрузки из стора */
+  const status: 'loading' | 'succeeded' = 'succeeded';
+  const movies: Films = [];
 
-  /* Release 5 */
+  /* Release 6 */
   const handleSearch = (query: string): void => {
     /* Здесь обновить поисковый запрос в сторе */
   };

@@ -1,10 +1,10 @@
 import React from 'react';
 import MovieCard from '../MovieCard/MovieCard';
 import styles from './MovieGrid.module.scss';
-import type { FilmPageType } from '../../types/moviesType';
+import type { Films } from '@/shared/api/kinopoiskTypes';
 
 type Props = {
-  movies: FilmPageType[];
+  movies: Films;
 };
 
 const MovieGrid = ({ movies }: Props): React.JSX.Element => (
