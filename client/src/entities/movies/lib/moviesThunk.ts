@@ -1,6 +1,4 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { searchMovies } from '@/shared/api/kinopoisk';
-import type { FilmPageType } from '../types/moviesType';
 
 export const fetchTopMovies = createAsyncThunk('movies/fetchTop', async () => {
   /* Release 1 */
@@ -8,7 +6,7 @@ export const fetchTopMovies = createAsyncThunk('movies/fetchTop', async () => {
 });
 
 export const searchMoviesAsync = createAsyncThunk('movies/search', async (query: string) => {
-	/* Release 6 */
+  /* Release 6 */
   // Здесь вызовите API-метод searchMovies и верните результат
 });
 

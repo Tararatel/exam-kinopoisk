@@ -16,9 +16,9 @@ const baseMovieSchema = z.object({
 });
 
 export const filmPageSchema = baseMovieSchema.extend({
-	nameRu: z.string(),
-	ratingKinopoisk: z.number(),
-	description: z.string(),
+  nameRu: z.string(),
+  ratingKinopoisk: z.number(),
+  description: z.string(),
 });
 
 export const favoriteSchema = filmPageSchema.extend({

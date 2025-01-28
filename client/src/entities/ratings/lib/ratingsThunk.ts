@@ -1,5 +1,4 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axiosInstance from '@/shared/api/axiosInstance';
 import type { Rating } from '../types/ratingsType';
 
 

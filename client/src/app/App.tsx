@@ -11,7 +11,7 @@ function App(): React.JSX.Element {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="favorites" element={<FavoritesPage />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/movies/:id" element={<MoviePage />} />
         </Route>
       </Routes>

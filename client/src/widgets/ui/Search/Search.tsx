@@ -13,7 +13,6 @@ const Search: React.FC<SearchProps> = ({
   placeholder = 'Поиск...',
 }) => {
   const [searchValue, setSearchValue] = useState(initialValue);
-	
 
   useEffect(() => {
     const timer = setTimeout(() => {

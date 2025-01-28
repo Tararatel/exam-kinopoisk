@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import type { FilmPageType, Movie, MoviesState } from '../types/moviesType';
-import { fetchMovieDetails, fetchTopMovies, searchMoviesAsync } from '../lib/moviesThunk';
+import type { MoviesState } from '../types/moviesType';
 
 const initialState: MoviesState = {
   list: [],
@@ -18,22 +17,7 @@ const moviesSlice = createSlice({
       state.searchQuery = action.payload;
     },
   },
-  extraReducers: (builder) => {
-    builder
-    /* Release 1 */
-    // Обработайте состояние загрузки
-    // Обновите список фильмов и статус
-    // Обработайте ошибку
-
-    /* Release 2 */
-    // Обработайте состояние загрузки
-    // Сохраните текущий фильм в стейт
-    // Обработайте ошибку
-
-    /* Release 6 */
-    // Обновите список фильмов результатами поиска
-    // Обработайте ошибку
-  },
+  extraReducers: (builder) => {},
 });
 
 export const { setSearchQuery } = moviesSlice.actions;

@@ -11,8 +11,7 @@ const baseMovieSchema = z.object({
   nameRu: z.string(),
 });
 
-export const filmPageSchema = baseMovieSchema.extend({
-});
+export const filmPageSchema = baseMovieSchema.extend({});
 
 export type Movie = z.infer<typeof baseMovieSchema>;
 export type FilmPageType = z.infer<typeof filmPageSchema>;

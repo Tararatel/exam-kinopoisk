@@ -1,35 +1,29 @@
 import React, { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
-import { fetchMovieDetails } from '@/entities/movies/lib/moviesThunk';
-import { rateMovie, fetchUserRating } from '@/entities/ratings/lib/ratingsThunk';
+import { useNavigate } from 'react-router-dom';
 import Rating from '@mui/material/Rating';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import styles from './MoviePage.module.scss';
+import type { Movie } from '@/entities/movies/types/moviesType';
 
 const MoviePage = (): React.JSX.Element => {
   const navigate = useNavigate();
+  /* Release 2 */
+  /* Получить данные фильма из стора вместо моковых данных */
+  const movie: Movie = {
+    filmId: 1,
+    title: 'название',
+    year: '2025',
+    posterUrl: '/no-img.jpeg',
+    rating: 4,
+    description: 'описание',
+    ratingKinopoisk: 3,
+    nameRu: 'название на русском',
+  };
+  const status: 'loading' | 'succeeded' = 'succeeded';
+  const userRating = 2;
 
-	/* Release 2 */
-  /* Здесь получить filmId из URL параметров */
-  /* Здесь получить dispatch */
-  /* Здесь получить данные фильма из стора */
-
-	/* Release 7 */
-  /* Здесь получить оценку из стора */
-
-  useEffect(() => {
-    if (id) {
-      /* Release 2 */
-      /* Здесь запросить детали фильма */
-
-      /* Release 7 */
-      /* Здесь запросить оценку пользователя */
-    }
-  }, [id]);
-
+  /* Release 7 */
   const handleRatingChange = (newValue: number | null): void => {
-    /* Release 7 */
     /* Здесь отправить оценку на сервер */
   };
 

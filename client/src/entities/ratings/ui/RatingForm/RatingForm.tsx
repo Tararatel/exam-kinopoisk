@@ -3,8 +3,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { ratingSchema } from '../../types/ratingsType';
 import type { z } from 'zod';
-import { useAppDispatch } from '@/shared/lib/hooks';
-import { rateMovie } from '../../lib/ratingsThunk';
 
 type FormData = z.infer<typeof ratingSchema>;
 
